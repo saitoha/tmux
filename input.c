@@ -1241,7 +1241,7 @@ input_csi_dispatch(struct input_ctx *ictx)
 		break;
 	case INPUT_CSI_RM_PRIVATE:
 		switch (input_get(ictx, 0, 0, -1)) {
-		case 1:		/* GATM */
+		case 1:		/* DECCKM */
 			screen_write_mode_clear(&ictx->ctx, MODE_KCURSOR);
 			break;
 		case 3:		/* DECCOLM */
@@ -1304,7 +1304,7 @@ input_csi_dispatch(struct input_ctx *ictx)
 		break;
 	case INPUT_CSI_SM_PRIVATE:
 		switch (input_get(ictx, 0, 0, -1)) {
-		case 1:		/* GATM */
+		case 1:		/* DECCKM */
 			screen_write_mode_set(&ictx->ctx, MODE_KCURSOR);
 			break;
 		case 3:		/* DECCOLM */
